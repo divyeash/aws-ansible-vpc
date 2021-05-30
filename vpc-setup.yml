@@ -3,17 +3,17 @@
   gather_facts: false
   tasks:
    - name: Import Var for vpc
-   Include_vars: vars/vpc_setup
+     Include_vars: vars/vpc_setup
 
 
    - name: create project vpc
-   ec2_vpc_net:
-     name: "{{vpc_name}}"
-     cidr_block: "{{vpcCidr}}"
-     region: "{{region}}"
-     dns_support: yes
-     dns_hostnames: yes
-     tenacy: default
-     state: "{{state}}"
+     ec2_vpc_net:
+       name: "{{vpc_name}}"
+       cidr_block: "{{vpcCidr}}"
+       region: "{{region}}"
+       dns_support: yes
+       dns_hostnames: yes
+       tenacy: default
+       state: "{{state}}"
      register: vpcout
 
