@@ -89,7 +89,14 @@
          resource_tags:
            Name: myproj-prisub2
      register: prisub2_out
-
+   - name: Internet Gateway setup
+     ec2_vpc_igw:
+       vpc_id: "{{vpcout.vpc.id}}"
+       region: "{{region}}"
+       state: "{{state}}"
+       resource_tags:
+         Name: myproj_IGW
+       register: igw_out
 
 
 
