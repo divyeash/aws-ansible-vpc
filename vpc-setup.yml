@@ -27,7 +27,7 @@
        cidr: "{{PubSub1Cidr}}"
        map_public: yes
        resource_tags:
-         name: myproj-pubsub1
+         Name: myproj-pubsub1
      register: pubsub1_out
 
    - name: create pub subnet2 in zone 2
@@ -39,7 +39,7 @@
        cidr: "{{PubSub2Cidr}}"
        map_public: yes
        resource_tags:
-         name: myproj-pubsub2
+         Name: myproj-pubsub2
      register: pubsub2_out
 
    - name: create pub subnet3 in zone 3
@@ -51,7 +51,7 @@
        cidr: "{{PubSub3Cidr}}"
        map_public: yes
        resource_tags:
-        name: myproj-pubsub3
+        Name: myproj-pubsub3
      register: pubsub3_out
 
    - name: create pri subnet3 in zone 3
@@ -63,7 +63,7 @@
        cidr: "{{PrivSub3Cidr}}"
        map_public: yes
        resource_tags:
-        name: myproj-prisub3
+        Name: myproj-prisub3
      register: prisub3_out
 
    - name: create private subnet1 in zone 1
@@ -75,7 +75,7 @@
          cidr: "{{PrivSub1Cidr}}"
          map_public: yes
          resource_tags:
-           name: myproj-prisub1
+           Name: myproj-prisub1
      register: pri1_out
 
    - name: create pri subnet2 in zone 2
@@ -87,8 +87,9 @@
          cidr: "{{PrivSub2Cidr}}"
          map_public: yes
          resource_tags:
-           name: myproj-prisub2
+           Name: myproj-prisub2
      register: prisub2_out
+
 
 
 
