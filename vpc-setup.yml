@@ -42,8 +42,8 @@
          name: myproj-pubsub2
      register: pubsub2_out
 
-   - name: create pub subnet3 in zone 1
-       ec2_vpc_subnet:
+   - name: create pub subnet3 in zone 3
+     ec2_vpc_subnet:
          vpc_id: "{{vpcout.vpc.id}}"
          region: "{{region}}"
          az: "{{zone3}}"
@@ -52,7 +52,7 @@
          map_public: yes
          resource_tags:
            name: myproj-pubsub3
-       register: pubsub3_out
+     register: pubsub3_out
 
 
 
