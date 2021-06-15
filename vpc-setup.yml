@@ -122,6 +122,7 @@
        region: "{{region}}"
        if_exist_do_not_create: true
      register: Natgw_out
+
    - name: Route Table setup for pri subnet
      ec2_vpc_route_table:
       vpc_id: "{{vpcout.vpc.id}}"
