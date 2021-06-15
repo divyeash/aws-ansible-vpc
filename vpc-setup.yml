@@ -113,14 +113,14 @@
          - dest: 0.0.0.0/0
            gateway_id: "{{igw_out.gateway_id}}"
      register: pubRT_out
-   - name: Create new nat and allocate new EIP if gateway not exist
+  - name: Create new nat and allocate new EIP if gateway not exist
      ec2_vpc_nat_gateway:
        state: "{{state}}"
        subnet_id: "{{pubsub1_out.subnet.id}}"
        wait: yes
        region: "{{region}}"
        if_exist_do_not_create: true
-    register: Natgw_out
+     register: Natgw_out
   - name: Route Table setup for pri subnet
     ec2_vpc_route_table:
       vpc_id: "{{vpcout.vpc.id}}"
