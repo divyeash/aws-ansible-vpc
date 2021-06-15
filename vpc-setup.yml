@@ -113,6 +113,7 @@
          - dest: 0.0.0.0/0
            gateway_id: "{{igw_out.gateway_id}}"
      register: pubRT_out
+
   - name: Create new nat and allocate new EIP if gateway not exist
     ec2_vpc_nat_gateway:
        state: "{{state}}"
