@@ -114,7 +114,7 @@
            gateway_id: "{{igw_out.gateway_id}}"
      register: pubRT_out
   - name: Create new nat and allocate new EIP if gateway not exist
-     ec2_vpc_nat_gateway:
+    ec2_vpc_nat_gateway:
        state: "{{state}}"
        subnet_id: "{{pubsub1_out.subnet.id}}"
        wait: yes
