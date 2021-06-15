@@ -133,7 +133,7 @@
         - "{{pri1_out.subnet.id}}"
         - "{{prisub2_out.subnet.id}}"
         - "{{prisub3_out.subnet.id}}"
-      routes:
+       routes:
         - dest: 0.0.0.0/0
           gateway_id: "{{Natgw_out.gateway_id}}"
      register: priv_out
